@@ -7,16 +7,16 @@ const copyUsers = [...users]; // spread;
 const users_2 = [...users, 'cho', 'meo'];
 
 const hondaCar = {
-  model: 'Honda',
-  weight: '200Kg',
-  price: '800 milions',
+    model: 'Honda',
+    weight: '200Kg',
+    price: '800 milions',
 };
 // console.log('Spread object: ', { ...hondaCar });
 const redCar = {
-  // price: '900 milions',
-  ...hondaCar,
-  color: 'Red',
-  price: '900 milions',
+    // price: '900 milions',
+    ...hondaCar,
+    color: 'Red',
+    price: '900 milions',
 };
 console.log('Red Car: ', redCar);
 /*
@@ -30,10 +30,10 @@ console.log('Red Car: ', redCar);
 }
 */
 
-const arr = document.getQuerySelectorAll('#button'); // node lists, tuong tu arr, khong co nhung thuoc tinh hay phuong thuc giong arr
-const arrCopy = [...arr]; // arr thiet su.
+const arr = document.getQuerySelectorAll('p'); //arr là node lists, tương tự Array, nhưng không có những thuộc tính(property) hay phương thức(method) giống Array
+const arrCopy = [...arr]; // arrCopy trở thành Array thiệt sự.
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+    console.log(arr[i]);
 }
 arrCopy.map();
 arrCopy.forEach();
