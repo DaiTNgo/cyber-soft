@@ -90,7 +90,7 @@ const hondaCar = {
 };
 ```
 
-*Thêm thuộc tính color nếu trong hondaCar chưa có*
+**Thêm thuộc tính color** *nếu trong hondaCar chưa có*
 ```javascript
 const redCar = {
   ...hondaCar,
@@ -98,7 +98,7 @@ const redCar = {
 };
 ```
 
-*Cập nhật price của redCar (- Ghi đè -)*
+**Cập nhật price** *của redCar (- Ghi đè -)*
 ```javascript
 const updatePriceRedCar ={
     ...redCar,
