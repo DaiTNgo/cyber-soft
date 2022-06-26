@@ -10,8 +10,6 @@ const HOURS_IN_DAY = 24;
 // HOURS_IN_DAY = 21; --throw an error--
 ```
 
-<!-- ![](./img/1.png) -->
-
 # 2. Arrow function.
 
 ```javascript
@@ -28,17 +26,10 @@ const multipleTen = (num) => num * 10;
 const multipleTen = num => num * 10;
 ```
 
-
-
-<!-- ![arrow function 1](./img/2.png) -->
-<!-- ![arrow function 2](./img/3.png) -->
-<!-- ![arrow function 3](./img/4.png) -->
-
 # 3. Default Parameter.
 ```javascript
 const multipleTen = (num = 1) => num * 10;
 ```
-<!-- ![](./img/5.png) -->
 
 # 4. Template String.
 ```javascript
@@ -48,7 +39,6 @@ const xinChao = `
     My name is ${nameAnimal}. 
 `;
 ```
-<!-- ![Template String](./img/6.png) -->
 
 # 5. Rest Parameters.
 ```javascript
@@ -65,7 +55,19 @@ const caculateAvg = (...nums) => {
 console.log(caculateAvg(1, 2, 3)); // 2
 console.log(caculateAvg(1, 3, 5, 7, 9, 11, 13)); //7
 ```
-<!-- ![Rest Parameters](./img/7.png) -->
+
+```javascript
+const add = (userName, ...rest) => {
+
+    // rest=['soccer','badminton']
+    let content = `Những môn thể thao mà ${userName} thích là: `
+    for (let sport of rest) {
+        content += sport + ', '
+    }
+    console.log('>>> Content :', content);
+}
+add('dai', 'soccer', 'badminton')
+```
 
 # 6. Spread.
 
@@ -78,7 +80,6 @@ const copyUsers = [...users];
 const users_2 = [...users, 'cho', 'meo'];
 
 ```
-<!-- ![](./img/8.png) -->
 
     2. Object
 ```javascript
@@ -87,19 +88,28 @@ const hondaCar = {
   weight: '200Kg',
   price: '800 milion',
 };
+```
 
+*Thêm thuộc tính color nếu trong hondaCar chưa có*
+```javascript
 const redCar = {
   ...hondaCar,
   color: 'Red',
-  price: '900 milions',
 };
+```
+
+*Cập nhật price của redCar (- Ghi đè -)*
+```javascript
+const updatePriceRedCar ={
+    ...redCar,
+    price:'900 milions'
+}
 console.log(redCar);
 /**
 Kết quả console.log(redCar);
     {
         model: 'Honda',
         weight:'200Kg',
-        price: '800 milions',
         color: 'Red',
         price:'900 milions'
      } 
@@ -117,7 +127,6 @@ Kết quả console.log(redCar);
     }
 */
 ```
-<!-- ![](./img/9.png) -->
 
 # 7. Destructuring.
 
@@ -221,14 +230,6 @@ for (let value of arr) {
     console.log(value);
     // [1,2,3]
     //['Dai', "Duc", "Nguyen"]
-}
-
-const house = {
-    color: 'White',
-    area: '100m2'
-}
-for (let prop in house) {
-    console.log(prop);// 1,2,3
 }
 ```
 *2. Object*
